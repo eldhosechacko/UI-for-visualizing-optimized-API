@@ -1,0 +1,24 @@
+
+<main class="main-content">
+  <div class="product-container" (scroll)="onScroll($event)">
+    <header>
+      <h1>Product Catalog</h1>
+      <p>Scroll down to see more items</p>
+    </header>
+    <ul class="product-list">
+      <li *ngFor="let product of products" class="product-item">
+        <span class="product-name">{{ product.name }}</span>
+        <span class="product-category">{{ product.category }}</span>
+        <span class="product-price">${{ product.price.toFixed(2) }}</span>
+      </li>
+    </ul>
+
+    <div *ngIf="isLoading" class="feedback-indicator">
+      <p>Loading more products...</p>
+    </div>
+
+    <div *ngIf="allProductsLoaded && !isLoading" class="feedback-indicator">
+      <p>You've reached the end of the list.</p>
+    </div>
+  </div>
+</main>
