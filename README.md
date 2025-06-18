@@ -1,7 +1,7 @@
 
-/* ======================================================================
+/* ============================================
 README.md - How to Run This Angular Project
-======================================================================
+===============================================
 
 This Angular project is the frontend client for the NestJS Optimization API.
 It demonstrates:
